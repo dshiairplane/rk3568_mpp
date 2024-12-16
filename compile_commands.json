@@ -1,0 +1,17 @@
+[
+    {
+        "arguments": [
+            "/opt/atk-dlrk356x-toolchain/bin/aarch64-buildroot-linux-gnu-gcc",
+            "-c",
+            "-Wall",
+            "-O2",
+            "-I/home/dshiairplane/rk3568/sdk/linux/rk3568_linux_sdk/buildroot/output/rockchip_rk3568/target/usr/include",
+            "-I/home/dshiairplane/rk3568/sdk/linux/rk3568_linux_sdk/buildroot/output/rockchip_rk3568/target/usr/include/rockchip",
+            "-o",
+            "IMX415",
+            "imx415.c"
+        ],
+        "directory": "/home/dshiairplane/camera",
+        "file": "imx415.c"
+    }
+]
