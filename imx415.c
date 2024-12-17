@@ -13,7 +13,7 @@
 #include <linux/v4l2-subdev.h>
 #include <linux/fb.h>
 
-#define FMT_NUM_PLANES 1   //出图格式所使用的平面数(BGRX:1, NV12:2)
+#define FMT_NUM_PLANES 2   //出图格式所使用的平面数(BGRX:1, NV12:2)
 
 unsigned int screen_size;
 unsigned char * screen_base = NULL;
@@ -51,9 +51,9 @@ struct v4l2_dev imx415 = {
     .path = "/dev/video1",
     .name = "imx415",
     .subdev_path = "/dev/v4l-subdev3",
-    .out_type = "bgr",
+    .out_type = "yuv",
     .buf_type = V4L2_BUF_TYPE_VIDEO_CAPTURE_MPLANE,
-    .format = V4L2_PIX_FMT_XBGR32,
+    .format = V4L2_PIX_FMT_NV12,
     .width = 1088,                                      //LCD需要做16单位对齐
     .height = 1080,
     .req_count = 4,
